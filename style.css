@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 1.2;
+    font-family: 'Karla', sans-serif;
+    color: var(--grayish-blue);
+    background-color: var(--light-gray);
+    padding: var(--paddingX);
+}
+
+/* Declare CSS variable */
+:root {
+    /* COLOR VARIABLES */
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    
+    /* Add light cyan which not listed in style-guide.md*/
+    --light-cyan: #4ABEBD;
+
+    /* PADDING VARIABLES */
+    --paddingX: 1.8rem;
+    --paddingY: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2, h3 {
+    margin-top: 0;
+    line-height: 1.15;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.4rem; /* or 1.25rem*/
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+.price {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 640px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 40rem) {
+    .price {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    } 
+    
+    .community {
+        grid-column: 1 / 3;
+    }
+}
+
+.price > * {
+    padding: var(--paddingX) var(--paddingY);
+}
+
+.community {
+    background-color: white;
+}
+
+.community h2 {
+    color: var(--cyan);
+}
+
+.community .subtitle {
+    font-size: 1.2rem; /* or 1rem*/
+    color: var(--bright-yellow);
+    font-weight: bold;
+}
+
+.community p {
+    font-size: 1rem; /* or 0.85rem*/
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+.subscription {
+    background-color: var(--cyan);
+    color: white;
+}
+
+.subscription__price {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--light-gray);
+}
+
+.subscription__price span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 0.75rem;
+}
+
+.subscription #sign-up{
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: var(--bright-yellow);
+    color: white;
+    padding: 0.75rem;
+
+    display: block;
+    text-align: center;
+
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.why-us {
+    background-color: var(--light-cyan);
+    color: white;
+}
+
+.why-us ul {
+    margin-top: 0;
+    padding: 0;
+}
+
+.why-us ul li {
+    list-style-type: none;
+    font-size: 0.85rem;
+    color: var(--light-gray);
+    line-height: 1.3rem;
+}
