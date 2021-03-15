@@ -23,8 +23,9 @@ body {
     --light-gray: hsl(204, 43%, 93%);
     --grayish-blue: hsl(218, 22%, 67%);
     
-    /* Add light cyan which not listed in style-guide.md*/
+    /* Add light cyan and dark yellow which not listed in style-guide.md*/
     --light-cyan: #4ABEBD;
+    --half-transparent-yellow: hsla(71, 73%, 54%, 0.5);
 
     /* PADDING VARIABLES */
     --paddingX: 1.8rem;
@@ -128,6 +129,15 @@ p {
 
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.subscription #sign-up:hover{
+    background-color: var(--half-transparent-yellow);
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
 .why-us {
